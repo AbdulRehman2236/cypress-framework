@@ -58,25 +58,19 @@ This structure ensures modularity, reusability, and maintainability, making the 
 
 ## Running Test
 
+- To open the Cypress Test Runner, where you can select and run the tests, use below command
+
+  ```bash
+  npm run e2e:open:mode
+  ```
+
 - Before running test scenarios, execute the following command to clean previous results:
 
   ```bash
   npm run prereport
   ```
 
-- Open Cypress Test Runner:
-
-  ```bash
-  npm run e2e:open:mode
-  ```
-
 For execution of test scenarios, use below command:
-
-- Open Cypress Test Runner:
-
-  ```bash
-  npm run e2e:open:mode
-  ```
 
 - Run tests in different browsers:
 
