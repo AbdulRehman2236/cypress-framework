@@ -122,6 +122,10 @@ To generate Mocha Awesome Report, you can run the following command:
 
 - `npm run e2e:report`: This command generates the mocha html report in the mochawesome-report folder.
 
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request for any changes.
+
 ## Contact Information
 
 - Email: abdulrehmanfayyaz3083@gmail.com
