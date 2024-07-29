@@ -1,0 +1,8 @@
+mochawesome-report/
+mocha-report.json/
+cypress/reports
+cypress/downloads
+cypress/screenshots
+cypress/videos
+node_modules
+.vscode

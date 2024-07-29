@@ -1,0 +1,34 @@
+{
+  "name": "cypress-automation-framework",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "e2e:open:mode": "cypress open",
+    "e2e:chrome": "cypress run --browser chrome --headed",
+    "e2e:chrome:headless": "cypress run --browser chrome",
+    "e2e:edge": "cypress run --browser edge --headed",
+    "e2e:edge:headless": "cypress run --browser edge",
+    "e2e:firefox": "cypress run --browser firefox --headed",
+    "e2e:firefox:headless": "cypress run --browser firefox",
+    "e2e:electron": "cypress run --browser electron --headed",
+    "e2e:electron:headless": "cypress run --browser electron",
+    "merge:results": "mochawesome-merge cypress/reports/*.json > mocha-report.json",
+    "generate:results": "marge mocha-report.json",
+    "e2e:report": "npm run merge:results && npm run generate:results",
+    "delete:results": "rmdir /s /q cypress\\reports && echo true",
+    "prereport": "npm run delete:results"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cypress": "^13.13.1",
+    "typescript": "^5.5.3"
+  },
+  "devDependencies": {
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0"
+  }
+}
