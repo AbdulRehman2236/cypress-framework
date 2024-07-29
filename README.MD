@@ -21,21 +21,21 @@ Ensure you have Node.js and npm installed on your machine.
 
 The project follows a maintainable and scalable structure:
 
-- `cypress/e2e`: Contains the test files. Tests can be organized into subdirectories based on features or modules.
-- `cypress/fixtures`: Contains external fixtures (e.g., users information, products details etc) that can also be used to mock data during tests.
-- `cypress/support`: Contains custom commands and global configuration.
-  - `cypress/support/automation_services`: Contains Core functionalities related to automation framework using cypress
-    - `cypress/support/automation_services/assertions`: Centralized assertion methods for reuse throughout the project.
-    - `cypress/support/automation_services/classes`: Implementation of methods required to perform automation activities.
-    - `cypress/support/automation_services/interfaces`: Definitions of methods required to perform automation activities.
-  - `cypress/support/contracts`: Interfaces for handling parameters for methods.
-  - `cypress/support/enums`: Constants for better readability and maintainability.
-  - `cypress/support/pages`: Page Object Model (POM) classes representing web pages and their elements.
-  - `cypress/support/utils`: Utility functions for generating random data and reading fixture data from JSON files.
-- `cypress/downloads`: Stores files or data downloaded during test execution for assertion.
-- `cypress/reports`: Contains report data required to generate Mocha reports.
-- `cypress/screenshots`: Stores screenshots of failed test steps.
-- `cypress/videos`: Stores videos of test executions.
+- `cypress/e2e` : Contains the test files. Tests can be organized into subdirectories based on features or modules.
+- `cypress/fixtures` : Contains external fixtures (e.g., users information, products details etc) that can also be used to mock data during tests.
+- `cypress/support` : Contains custom commands and global configuration.
+  - `cypress/support/automation_services` : Contains Core functionalities related to automation framework using cypress
+    - `cypress/support/automation_services/assertions` : Centralized assertion methods for reuse throughout the project.
+    - `cypress/support/automation_services/classes` : Implementation of methods required to perform automation activities.
+    - `cypress/support/automation_services/interfaces` : Definitions of methods required to perform automation activities.
+  - `cypress/support/contracts` : Interfaces for handling parameters for methods.
+  - `cypress/support/enums` : Constants for better readability and maintainability.
+  - `cypress/support/pages` : Page Object Model (POM) classes representing web pages and their elements.
+  - `cypress/support/utils` : Utility functions for generating random data and reading fixture data from JSON files.
+- `cypress/downloads` : Stores files or data downloaded during test execution for assertion.
+- `cypress/reports` : Contains report data required to generate Mocha reports.
+- `cypress/screenshots` : Stores screenshots of failed test steps.
+- `cypress/videos` : Stores videos of test executions.
 
 This structure ensures modularity, reusability, and maintainability, making the automation framework scalable and easy to manage.
 
@@ -44,12 +44,12 @@ This structure ensures modularity, reusability, and maintainability, making the 
 1. Clone the repo using below URL:
 
    ```
-   https://github.com/AbdulRehman2236/cypress-automation-framework.git
+   https://github.com/AbdulRehman2236/cypress-framework.git
    ```
 
 2. Navigate to the project directory:
    ```
-   cd cypress-automation-framework
+   cd cypress-framework
    ```
 3. Install dependencies:
    ```
