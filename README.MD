@@ -64,7 +64,7 @@ This structure ensures modularity, reusability, and maintainability, making the 
   npm run e2e:open:mode
   ```
 
-- Before running test scenarios, execute the following command to clean previous results:
+Before running test scenarios, execute the following command to clean previous results:
 
   ```bash
   npm run prereport
