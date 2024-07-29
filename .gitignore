@@ -1,5 +1,5 @@
-mochawesome-report/
-mocha-report.json/
+mochawesome-report
+mocha-report.json
 cypress/reports
 cypress/downloads
 cypress/screenshots
