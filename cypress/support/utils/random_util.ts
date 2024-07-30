@@ -11,7 +11,7 @@ export default class RandomUtil {
     return randomString;
   }
 
-  static generateNumber(length: number = 1000) {
+  static generateNumber(length: number = 1000): number {
     return Math.floor(Math.random() * length);
   }
 }

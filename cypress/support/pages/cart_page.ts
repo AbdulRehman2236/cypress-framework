@@ -5,11 +5,11 @@ import BasePage from "./base_page";
 export default class CartPage extends BasePage {
   private readonly elemCheckout: string = '[data-test="checkout"]';
 
-  clickCheckout() {
+  clickCheckout(): void {
     this.clickOnElement(this.elemCheckout);
   }
 
-  verifyCartPageUrl() {
+  verifyCartPageUrl(): void {
     Expect.url(Urls.CART);
   }
 }

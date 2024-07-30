@@ -15,7 +15,7 @@ export default class Driver
   /**
    * @implements {Navigable}
    */
-  navigateToUrl(url: string) {
+  navigateToUrl(url: string): void {
     cy.visit(url);
   }
 
@@ -39,7 +39,7 @@ export default class Driver
    * @implements {Fillable}
    */
 
-  fillElement(element: string, text: string) {
+  fillElement(element: string, text: string): void {
     this.getElement(element).type(text);
   }
 
@@ -67,7 +67,7 @@ export default class Driver
    * @implements {Selectable}
    */
 
-  selectDropdownValue(element: string, value: string | number | Array<string | number>) {
+  selectDropdownValue(element: string, value: string | number | Array<string | number>): void {
     this.getElement(element).select(value);
   }
 
@@ -96,14 +96,14 @@ export default class Driver
    * @implements {CrossOriginHandler}
    */
 
-  setupCrossOriginHandling() {
+  setupCrossOriginHandling(): void {
     Cypress.on("uncaught:exception", (error: Error) => {
       if (error.stack?.includes("PrimaryOriginCommunicator.toSource")) return false;
       return true;
     });
   }
 
-  removeCrossOriginHandling() {
+  removeCrossOriginHandling(): void {
     Cypress.off("uncaught:exception", (error: Error) => {
       if (error.stack?.includes("PrimaryOriginCommunicator.toSource")) return true;
     });
@@ -113,7 +113,7 @@ export default class Driver
    * @implements {ElementManipulator}
    */
 
-  removeAttributeAndClick(element: string, attribute: string) {
+  removeAttributeAndClick(element: string, attribute: string): void {
     this.invokeMethod(element, "removeAttr", attribute).click();
   }
 

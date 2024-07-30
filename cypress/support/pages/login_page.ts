@@ -10,11 +10,11 @@ export default class LoginPage extends BasePage {
   private readonly elemLogout: string = "Logout";
   private readonly elemErrorMessage: string = "[data-test='error']";
 
-  goToApplicationUrl() {
+  goToApplicationUrl(): void {
     this.navigateToUrl(Urls.LOGIN);
   }
 
-  loginToApplication(username: string, password: string) {
+  loginToApplication(username: string, password: string): void {
     this.fillElement(this.elemUsername, username);
     this.fillElement(this.elemPassword, password);
     this.clickOnElement(this.elemLogin);
@@ -24,16 +24,16 @@ export default class LoginPage extends BasePage {
     Expect.url(Urls.INVENTORY);
   }
 
-  logoutUser() {
+  logoutUser(): void {
     this.clickOnElement(this.elemMenu);
     this.clickOnElementByText(this.elemLogout);
   }
 
-  verifyLoginErrorMessage() {
+  verifyLoginErrorMessage(): void {
     Expect.elementHaveText(this.elemErrorMessage, ErrorMessages.INVALID_LOGIN);
   }
 
-  verifyUserLogoutSuccessfully() {
+  verifyUserLogoutSuccessfully(): void {
     Expect.url(Urls.LOGIN);
   }
 }

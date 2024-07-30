@@ -46,12 +46,12 @@ export default class InventoryPage extends BasePage {
     this.clickOnElement(this.getElemRemoveProductName(productName));
   }
 
-  resetAppState() {
+  resetAppState(): void {
     this.clickOnElement(this.elemMenu);
     this.clickOnElement(this.elemRestAppState);
   }
 
-  verifyProductDetails(product: IProductDetails) {
+  verifyProductDetails(product: IProductDetails): void {
     const { name, description, price, img } = product;
     Expect.elementHaveText(this.elemInventoryItemName, name);
     Expect.elementHaveText(this.elemInventoryItemDesc, description);
@@ -85,12 +85,12 @@ export default class InventoryPage extends BasePage {
     Expect.url(socialUrl);
   }
 
-  applySorting(sortBy: Sorting) {
+  applySorting(sortBy: Sorting): void {
     this.selectDropdownValue(this.elemSortContainer, sortBy);
     Expect.elementHaveText(this.elemActiveOption, sortBy);
   }
 
-  verifyProductsAreSorted(sortedBy: Sorting) {
+  verifyProductsAreSorted(sortedBy: Sorting): void {
     const isSortingByName = sortedBy === Sorting.NAME_ASCENDING || sortedBy === Sorting.NAME_DESCENDING;
     const element = isSortingByName ? this.elemInventoryItem : this.elemInventoryItemPrice;
 
