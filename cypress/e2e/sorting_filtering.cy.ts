@@ -5,6 +5,7 @@ import LoginPage from "../support/pages/login_page";
 const login = new LoginPage();
 const inventory = new InventoryPage();
 const { username, password } = login.getUserCredentials();
+const sorting = [Sorting.PRICE_ASCENDING, Sorting.NAME_ASCENDING, Sorting.PRICE_DESCENDING, Sorting.NAME_DESCENDING];
 
 describe("Product Sorting Tests", () => {
   beforeEach(() => {
@@ -12,23 +13,10 @@ describe("Product Sorting Tests", () => {
     login.loginToApplication(username, password);
   });
 
-  it("Verify products are sorted in ascending order by price", () => {
-    inventory.applySorting(Sorting.PRICE_ASCENDING);
-    inventory.verifyProductsAreSorted(Sorting.PRICE_ASCENDING);
-  });
-
-  it("Verify products are sorted in ascending order by name", () => {
-    inventory.applySorting(Sorting.NAME_ASCENDING);
-    inventory.verifyProductsAreSorted(Sorting.NAME_ASCENDING);
-  });
-
-  it("Verify products are sorted in descending order by price", () => {
-    inventory.applySorting(Sorting.PRICE_DESCENDING);
-    inventory.verifyProductsAreSorted(Sorting.PRICE_DESCENDING);
-  });
-
-  it("Verify products are sorted in descending order by name", () => {
-    inventory.applySorting(Sorting.NAME_DESCENDING);
-    inventory.verifyProductsAreSorted(Sorting.NAME_DESCENDING);
+  sorting.forEach((sortingType) => {
+    it(`Verify products are sorted by ${sortingType}`, () => {
+      inventory.applySorting(sortingType);
+      inventory.verifyProductsAreSorted(sortingType);
+    });
   });
 });
